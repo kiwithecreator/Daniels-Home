@@ -1,11 +1,11 @@
 const firebaseConfig = {
-  apiKey: "AIzaSyBl98YMadTu7V8XJQrinkLiQpxNuIPQknY",
-  authDomain: "expense-tracker-b8958.firebaseapp.com",
-  projectId: "expense-tracker-b8958",
-  storageBucket: "expense-tracker-b8958.firebasestorage.app",
-  messagingSenderId: "1064106482496",
-  appId: "1:1064106482496:web:9efd5955e3dabf1f43b8a5",
-  databaseURL: "https://expense-tracker-b8958-default-rtdb.firebaseio.com"
+  apiKey: "AIzaSyA0ZmztyKdOiADQicO08d0uu1E8HKvL0bw",
+  authDomain: "daniels-home-3a47c.firebaseapp.com",
+  projectId: "daniels-home-3a47c",
+  storageBucket: "daniels-home-3a47c.firebasestorage.app",
+  messagingSenderId: "1009330492033",
+  appId: "1:1009330492033:web:aad2ccfc504f39c6c67380",
+  databaseURL: "https://daniels-home-3a47c-default-rtdb.firebaseio.com"
 };
 
 firebase.initializeApp(firebaseConfig);
