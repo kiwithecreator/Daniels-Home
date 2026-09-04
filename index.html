@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Monthly Expenses">
+  <meta name="theme-color" content="#2563EB">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Monthly Expenses</title>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+</head>
+<body>
+
+<!-- Session Expired Screen -->
+<div id="session-expired-screen" style="display:none; position:fixed; inset:0; background:#1e293b; z-index:999; flex-direction:column; align-items:center; justify-content:center; padding:32px;">
+  <div style="font-size:2rem; margin-bottom:16px;">🔐</div>
+  <div style="font-size:1.2rem; font-weight:600; color:#f8fafc; margin-bottom:8px;">Session Expired</div>
+  <div style="font-size:0.85rem; color:#94a3b8; margin-bottom:32px; text-align:center;">Sign in to restore your session.</div>
+  <div style="width:100%; max-width:300px;">
+    <input type="email" id="session-email" placeholder="Email" style="width:100%; padding:12px 14px; border-radius:10px; border:1.5px solid #334155; background:#0f172a; color:#f8fafc; font-size:0.95rem; font-family:Inter,sans-serif; outline:none; margin-bottom:10px;">
+    <input type="password" id="session-password" placeholder="Password" style="width:100%; padding:12px 14px; border-radius:10px; border:1.5px solid #334155; background:#0f172a; color:#f8fafc; font-size:0.95rem; font-family:Inter,sans-serif; outline:none;" onkeydown="if(event.key==='Enter')sessionLogin()">
+    <button onclick="sessionLogin()" style="margin-top:14px; width:100%; padding:13px; background:#2563EB; color:white; border:none; border-radius:10px; font-size:0.95rem; font-weight:600; font-family:Inter,sans-serif; cursor:pointer;">Sign In</button>
+    <p id="session-error" style="color:#ef4444; text-align:center; margin-top:10px; font-size:0.85rem;"></p>
+  </div>
+</div>
+
+<!-- Main App -->
+<div id="app-container" style="display:none;">
+  <div id="feature-host"></div>
+</div>
+
+<!-- Bottom Tab Bar (populated by js/tabs.js) -->
+<nav id="tab-bar" class="hidden" aria-label="Sections"></nav>
+
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
