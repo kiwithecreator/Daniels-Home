@@ -1,4 +1,4 @@
-const CACHE = 'exptrack-v3';
+const CACHE = 'exptrack-v4';
 const FILES = [
   './',
   './index.html',
